@@ -1,3 +1,4 @@
+# Tinh tien dien
 tinh_tien_dien.function <- function(so_kw){
   bac1 <- 1678
   bac2 <- 1734
@@ -22,4 +23,23 @@ tinh_tien_dien.function <- function(so_kw){
   }
 
   print(paste('Tien dien phai tra:', paste(format(tien_dien, big.mark = ',', decimal.mark = '.'), sep='')))
+}
+
+# Kiem tra so nguyen to
+kt_soNT.function <- function(n){
+    result <- ''
+    if (n<2){
+        result <- paste(n, 'is NOT PRIME!')
+    } else if (n==2){
+        result <- paste(n, 'is PRIME!')
+    } else {
+        for (i in 2:(n-1)){
+            if (n%%i==0){
+                result <- paste(n, 'is NOT PRIME!')
+                break
+            }
+            result <- paste(n, 'is PRIME!')
+        }
+    }
+    return(result)
 }
