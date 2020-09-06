@@ -43,3 +43,9 @@ kt_soNT.function <- function(n){
     }
     return(result)
 }
+
+# Create mode function
+getmode <- function(v){
+    uniqv <- unique(v)
+    uniqv[which.max(tabulate(match(v, uniqv)))]
+}
